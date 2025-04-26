@@ -1,5 +1,4 @@
 /*
- 
     Author: Akash Sen
     Singleton Design Pattern
  */
@@ -12,6 +11,7 @@ final class Singleton {
 }
 
 
+// MARK: Initialization
 let concurrentGroup = DispatchGroup()
 let concurrentQueue = DispatchQueue(label: "concurrent.access.singleton", attributes: .concurrent)
 

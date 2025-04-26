@@ -29,36 +29,35 @@ final class RockBand: Band {
 }
 
 // MARK: Creator Interface
-protocol BandFactoryProtocol {
-    func createBand() -> Band
+protocol BandFactory {
+    func createBand(type: BandType) -> Band
 }
 
-// MARK: Concrete Creators
-final class RockBandFactory: BandFactoryProtocol {
-    func createBand() -> Band {
-        return RockBand()
-    }
-}
-
-final class PopBandFactory: BandFactoryProtocol {
-    func createBand() -> Band {
-        return PopBand()
+// MARK: Concrete Creator
+final class ConcreteBandFactory: BandFactory {
+    func createBand(type: BandType) -> Band {
+        switch type {
+        case .pop:
+            return PopBand()
+        case .rock:
+            return RockBand()
+        }
     }
 }
 
 // MARK: Initialization
 class Client {
-    private var bandFactory: BandFactoryProtocol
+    private var bandFactory: BandFactory
     
-    init(bandFactory: BandFactoryProtocol) {
+    init(bandFactory: BandFactory) {
         self.bandFactory = bandFactory
     }
     
-    func getBand() -> Band {
-        return bandFactory.createBand()
+    func getBand(type: BandType) -> Band {
+        return bandFactory.createBand(type: type)
     }
 }
 
-let client = Client(bandFactory: PopBandFactory())
-let band = client.getBand()
+let client = Client(bandFactory: ConcreteBandFactory())
+let band = client.getBand(type: .rock)
 band.play()

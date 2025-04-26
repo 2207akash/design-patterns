@@ -24,29 +24,28 @@ final class RockBand: Band {
 }
 
 // MARK: Creator Interface
-protocol BandFactoryProtocol {
+protocol BandFactory {
     func createBand() -> Band
 }
 
 // MARK: Concrete Creators
-final class PopBandFactory: BandFactoryProtocol {
-    func createBand() -> Band {
-        return PopBand()
-    }
-}
-
-final class RockBandFactory: BandFactoryProtocol {
+final class RockBandFactory: BandFactory {
     func createBand() -> Band {
         return RockBand()
     }
 }
 
+final class PopBandFactory: BandFactory {
+    func createBand() -> Band {
+        return PopBand()
+    }
+}
 
 // MARK: Initialization
 class Client {
-    private var bandFactory: BandFactoryProtocol
+    private var bandFactory: BandFactory
     
-    init(bandFactory: BandFactoryProtocol) {
+    init(bandFactory: BandFactory) {
         self.bandFactory = bandFactory
     }
     
@@ -55,5 +54,6 @@ class Client {
     }
 }
 
-let client = Client(bandFactory: RockBandFactory())
-client.getBand().play()
+let client = Client(bandFactory: PopBandFactory())
+let band = client.getBand()
+band.play()

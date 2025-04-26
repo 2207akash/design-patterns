@@ -1,6 +1,7 @@
 /*
     Author: Akash Sen
-    Factory Design Pattern
+    Simple Factory Design Pattern
+    (Non standard)
 */
 
 import Foundation
@@ -44,6 +45,7 @@ final class ConcreteBandFactory: BandFactory {
         }
     }
 }
+
 
 // MARK: Initialization
 class Client {

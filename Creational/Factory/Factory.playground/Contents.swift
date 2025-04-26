@@ -1,6 +1,7 @@
 /*
     Author: Akash Sen
     Factory Design Pattern
+    (Original standard)
 */
 
 import Foundation
@@ -40,6 +41,7 @@ final class PopBandFactory: BandFactory {
         return PopBand()
     }
 }
+
 
 // MARK: Initialization
 class Client {

@@ -1,5 +1,13 @@
 # Design Patterns
-List of some of the design patterns implemented in Swift
+List of design patterns implemented in Swift.
+
+## Directions To Use
+- Clone the repo or Download the zip.
+- Open `Design Patterns.xcodeproj` file.
+
+All the implementations are done in `XCode Playgrounds`, so feel free to run and experiment 🙂
+
+## Table of Contents
 
 ### Singleton
 

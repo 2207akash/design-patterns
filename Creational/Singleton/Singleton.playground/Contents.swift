@@ -6,7 +6,7 @@
 import Foundation
 
 final class Singleton {
-    public static let shared = Singleton()
+    static let shared = Singleton()
     private init() {}
 }
 

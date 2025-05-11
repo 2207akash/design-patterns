@@ -7,55 +7,55 @@
 import Foundation
 
 // MARK: Product Interface
-protocol Band {
-    func play()
+protocol PaymentGateway {
+    func pay()
 }
 
 // MARK: Concrete Products
-final class PopBand: Band {
-    func play() {
-        print("Playing Pop Music")
+final class PayPalPaymentGateway: PaymentGateway {
+    func pay() {
+        print("Pay using Paypal")
     }
 }
 
-final class RockBand: Band {
-    func play() {
-        print("Playing Rock Music")
+final class StripePaymentGateway: PaymentGateway {
+    func pay() {
+        print("Pay using Stripe")
     }
 }
 
 // MARK: Creator Interface
-protocol BandFactory {
-    func createBand() -> Band
+protocol PaymentGatewayFactory {
+    func createPaymentGateway() -> PaymentGateway
 }
 
 // MARK: Concrete Creators
-final class RockBandFactory: BandFactory {
-    func createBand() -> Band {
-        return RockBand()
+final class PayPalPaymentGatewayFactory: PaymentGatewayFactory {
+    func createPaymentGateway() -> PaymentGateway {
+        return PayPalPaymentGateway()
     }
 }
 
-final class PopBandFactory: BandFactory {
-    func createBand() -> Band {
-        return PopBand()
+final class StripePaymentGatewayFactory: PaymentGatewayFactory {
+    func createPaymentGateway() -> PaymentGateway {
+        return StripePaymentGateway()
     }
 }
 
 
 // MARK: Initialization
 class Client {
-    private var bandFactory: BandFactory
+    private var paymentGatewayFactory: PaymentGatewayFactory
     
-    init(bandFactory: BandFactory) {
-        self.bandFactory = bandFactory
+    init(paymentGatewayFactory: PaymentGatewayFactory) {
+        self.paymentGatewayFactory = paymentGatewayFactory
     }
     
-    func getBand() -> Band {
-        return bandFactory.createBand()
+    func getPaymentGateway() -> PaymentGateway {
+        return paymentGatewayFactory.createPaymentGateway()
     }
 }
 
-let client = Client(bandFactory: PopBandFactory())
-let band = client.getBand()
-band.play()
+let client = Client(paymentGatewayFactory: PayPalPaymentGatewayFactory())
+let paymentGateway = client.getPaymentGateway()
+paymentGateway.pay()

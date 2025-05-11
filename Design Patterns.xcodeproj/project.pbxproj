@@ -11,8 +11,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		750E466A2DCE159E005A30ED /* AbstractFactory.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AbstractFactory.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		751815772DBD6FFB0049B4CB /* Design Patterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Design Patterns.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		751815A12DBD7E6D0049B4CB /* Singleton.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Singleton.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		75A524002DD11B8000C66537 /* SingletonLazyLoading.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SingletonLazyLoading.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		75A524012DD11C3400C66537 /* SingletonLazyLoadingWithLock.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SingletonLazyLoadingWithLock.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		75C274262DBD8D7200956D5E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		75C274272DBD8DB800956D5E /* SimpleFactory.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SimpleFactory.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		75FCA7722DBD80F000F0089C /* Factory.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Factory.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -59,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				75C274272DBD8DB800956D5E /* SimpleFactory.playground */,
+				750E466A2DCE159E005A30ED /* AbstractFactory.playground */,
 				75FCA7722DBD80F000F0089C /* Factory.playground */,
 			);
 			path = Factory;
@@ -68,6 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				751815A12DBD7E6D0049B4CB /* Singleton.playground */,
+				75A524002DD11B8000C66537 /* SingletonLazyLoading.playground */,
+				75A524012DD11C3400C66537 /* SingletonLazyLoadingWithLock.playground */,
 			);
 			path = Singleton;
 			sourceTree = "<group>";

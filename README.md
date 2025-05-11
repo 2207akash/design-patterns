@@ -11,13 +11,15 @@ All the implementations are done in `XCode Playgrounds`, so feel free to run and
 
 ### Singleton
 
-| SNo | Design Pattern | Swift Implementation |
-| --- | --- | --- |
-| 1 | Singleton | [Code](Creational/Singleton/Singleton.playground/Contents.swift)
+| SNo | Design Pattern | Swift Implementation | Comments |
+| --- | --- | --- | --- |
+| 1 | Singleton (Eager Loading) | [Code](Creational/Singleton/Singleton.playground/Contents.swift) | |
+| 2 | Singleton (Lazy Loading - No Lock) | [Code](Creational/Singleton/SingletonLazyLoading.playground/Contents.swift) | Not Thread Safe | 
+| 3 | Singleton (Lazy Loading - Double Lock) | [Code](Creational/Singleton/SingletonLazyLoadingWithLock.playground/Contents.swift) | Thread Safe |
 
 ### Factory
 
-| SNo | Design Pattern | Swift Implementation |
-| --- | --- | --- |
-| 1 | Simple Factory (with enum) | [Code](Creational/Factory/SimpleFactory.playground/Contents.swift)
-| 2 | Factory | [Code](Creational/Factory/Factory.playground/Contents.swift)
+| SNo | Design Pattern | Swift Implementation | Comments |
+| --- | --- | --- | --- |
+| 1 | Simple Factory (with enum) | [Code](Creational/Factory/SimpleFactory.playground/Contents.swift) | |
+| 2 | Factory | [Code](Creational/Factory/Factory.playground/Contents.swift) | |

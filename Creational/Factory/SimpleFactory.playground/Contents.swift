@@ -6,42 +6,42 @@
 
 import Foundation
 
-// MARK: Band Types
-enum BandType {
-    case pop, rock
+// MARK: Payment Gateway Types
+enum PaymentGatewayType {
+    case paypal, stripe
 }
 
 // MARK: Product Interface
-protocol Band {
-    func play()
+protocol PaymentGateway {
+    func pay()
 }
 
 // MARK: Concrete Products
-final class PopBand: Band {
-    func play() {
-        print("Playing Pop Music")
+final class PaypalPaymentGateway: PaymentGateway {
+    func pay() {
+        print("Pay using Paypal")
     }
 }
 
-final class RockBand: Band {
-    func play() {
-        print("Playing Rock Music")
+final class StripePaymentGateway: PaymentGateway {
+    func pay() {
+        print("Pay using Stripe")
     }
 }
 
 // MARK: Creator Interface
-protocol BandFactory {
-    func createBand(type: BandType) -> Band
+protocol PaymentGatewayFactory {
+    func createPaymentGateway(type: PaymentGatewayType) -> PaymentGateway
 }
 
 // MARK: Concrete Creator
-final class ConcreteBandFactory: BandFactory {
-    func createBand(type: BandType) -> Band {
+final class ConcretePaymentGatewayFactory: PaymentGatewayFactory {
+    func createPaymentGateway(type: PaymentGatewayType) -> PaymentGateway {
         switch type {
-        case .pop:
-            return PopBand()
-        case .rock:
-            return RockBand()
+        case .paypal:
+            return PaypalPaymentGateway()
+        case .stripe:
+            return StripePaymentGateway()
         }
     }
 }
@@ -49,17 +49,17 @@ final class ConcreteBandFactory: BandFactory {
 
 // MARK: Initialization
 class Client {
-    private var bandFactory: BandFactory
+    private var paymentGatewayFactory: PaymentGatewayFactory
     
-    init(bandFactory: BandFactory) {
-        self.bandFactory = bandFactory
+    init(paymentGatewayFactory: PaymentGatewayFactory) {
+        self.paymentGatewayFactory = paymentGatewayFactory
     }
     
-    func getBand(type: BandType) -> Band {
-        return bandFactory.createBand(type: type)
+    func getPaymentGateway(type: PaymentGatewayType) -> PaymentGateway {
+        return paymentGatewayFactory.createPaymentGateway(type: type)
     }
 }
 
-let client = Client(bandFactory: ConcreteBandFactory())
-let band = client.getBand(type: .rock)
-band.play()
+let client = Client(paymentGatewayFactory: ConcretePaymentGatewayFactory())
+let paymentGateway = client.getPaymentGateway(type: .paypal)
+paymentGateway.pay()

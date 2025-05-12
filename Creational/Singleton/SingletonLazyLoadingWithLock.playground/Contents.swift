@@ -25,4 +25,4 @@ final class Singleton {
 
 
 // MARK: Initialization
-let obj = Singleton.shared
+let obj = Singleton.getInstance()

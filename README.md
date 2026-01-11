@@ -7,7 +7,7 @@ List of design patterns implemented in Swift.
 
 | SNo | Design Pattern | Implementation |
 | --- | --- | --- |
-| 1 | Singleton | [Code](Singleton/Singleton.swift) |
+| 1 | Singleton | [Code](Singleton/Singleton.swift) • [Docs](Singleton/Singleton.md) |
 
 ### Factory
 

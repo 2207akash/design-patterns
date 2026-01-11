@@ -5,16 +5,20 @@ List of design patterns implemented in Swift.
 
 ### Singleton
 
-| SNo | Design Pattern |  |  |
-| --- | --- | --- | --- |
-| 1 | Singleton | [Code](Singleton/Singleton.swift) | [Docs](Singleton/Singleton.md) |
+[Documentation](singleton/Singleton.md)
+
+| SNo | Design Pattern |  |
+| --- | --- | --- |
+| 1 | Singleton | [Code](singleton/Singleton.swift) |
 
 
 <!--
 ### Factory
 
-| SNo | Design Pattern |  |  |
-| --- | --- | --- | --- |
-| 1 | Simple Factory (with enum) | [Code](Factory/SimpleFactory.swift) | [Docs](Factory/SimplpeFactory.md) |
-| 2 | Factory | [Code](Factory/Factory.swift) | [Docs](Factory/Factory.md) |
+[Documentation](factory/SimpleFactory.md)
+
+| SNo | Design Pattern |  |
+| --- | --- | --- |
+| 1 | Simple Factory (with enum) | [Code](factory/SimpleFactory.swift) |
+| 2 | Factory | [Code](factory/Factory.swift) |
 -->

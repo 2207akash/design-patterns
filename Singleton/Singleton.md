@@ -1,4 +1,4 @@
-# Swift Singleton Initialization Documentation
+# Singleton Design Pattern
 
 ## Initialization Timing
 In Swift, the `Singleton` object is loaded **on first use** (Lazy Initialization), not at app launch. 

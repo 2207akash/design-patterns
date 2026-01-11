@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: Singleton Class
 final class Singleton {
     static let shared = Singleton()
     
@@ -18,6 +19,7 @@ final class Singleton {
         // Implementation of business logic
     }
 }
+
 
 // Usage
 let singletonInstance = Singleton.shared

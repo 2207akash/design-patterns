@@ -22,5 +22,5 @@ final class Singleton {
 
 
 // Usage
-let singletonInstance = Singleton.shared
-singletonInstance.someBusinessLogic()
+let obj = Singleton.shared
+obj.someBusinessLogic()

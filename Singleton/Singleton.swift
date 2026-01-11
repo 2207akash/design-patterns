@@ -1,4 +1,9 @@
-// See documentation: [Singleton.md](Singleton.md)
+/*
+    Author: Akash Sen
+    Singleton Design Pattern
+    
+    Want to read more? Find the documentation here: https://github.com/2207akash/design-patterns/blob/main/Singleton/Singleton.md
+*/
 
 import Foundation
 

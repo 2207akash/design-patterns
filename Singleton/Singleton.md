@@ -21,20 +21,12 @@ Swift's static initialization is **thread-safe**. The language uses an internal 
 
 ---
 
-## Technical Comparison ✅
+## Technical Comparison
 
-A quick, user-friendly walkthrough of what happens when the app runs and the Singleton is used:
-
-- **App launch** — The app binary is loaded, but **no** Singleton instance is created yet.
-- **First access** — When you first call `Singleton.shared`, the instance is **created and initialized**; memory is allocated and any `init()` logic runs.
-- **Subsequent access** — Later calls return the **same** instance immediately with **no additional allocation**.
-
-**Quick table**
-
-| Stage | What happens | Result |
-| --- | --- | --- |
-| App launch | App starts, code loaded | No instance created yet |
-| First access | `Singleton.shared` accessed | Instance created & initialized |
-| Subsequent access | `Singleton.shared` used again | Same instance returned (fast) |
+| Stage | Action | Memory State |
+| :--- | :--- | :--- |
+| **App Launch** | Binary loaded into RAM | No `Singleton` instance exists. |
+| **Accessing `obj`** | `Singleton.init()` is triggered | Memory allocated; `init` logic runs. |
+| **Subsequent Access** | Return existing reference | No allocation; instant return. |
 
 ---

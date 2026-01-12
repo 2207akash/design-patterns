@@ -5,8 +5,6 @@ In Swift, the `Singleton` object is loaded **on first use** (Lazy Initialization
 
 Even when declared as a global variable or a static property, Swift optimizes memory by deferring the creation of the instance until the code execution actually requires it.
 
----
-
 ## Core Technical Details
 
 ### 1. Lazy by Default
@@ -19,8 +17,6 @@ Swift's static initialization is **thread-safe**. The language uses an internal 
 * **Pre-Launch:** Only the metadata/pointer for the object exists.
 * **Post-First Use:** The object is allocated on the **Heap** and persists for the lifetime of the app.
 
----
-
 ## Technical Comparison
 
 | Stage | Action | Memory State |
@@ -28,5 +24,3 @@ Swift's static initialization is **thread-safe**. The language uses an internal 
 | **App Launch** | Binary loaded into RAM | No `Singleton` instance exists. |
 | **Accessing `obj`** | `Singleton.init()` is triggered | Memory allocated; `init` logic runs. |
 | **Subsequent Access** | Return existing reference | No allocation; instant return. |
-
----
